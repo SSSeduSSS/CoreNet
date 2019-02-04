@@ -49,8 +49,8 @@ namespace PrimerCore
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseCookiePolicy();
+            app.UseStaticFiles(); //Copiar los archivos que 
+            app.UseCookiePolicy(); //
 
             app.UseMvc();
         }

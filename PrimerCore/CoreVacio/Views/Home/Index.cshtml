@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<img src="~/images/rambo.jpg" />
+
+<h2 id="titulo" style="color:darkblue"></h2>
+<button id="boton" type="button" class="btn-danger">Calamar</button>
+
+<script>
+    $(document).ready(function () {
+        $("#boton").click(function () {
+            alert("Boton pulsado");
+            $("titulo").text("Stark");
+        });
+    });
+</script>
