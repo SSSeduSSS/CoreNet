@@ -12,5 +12,11 @@ namespace CoreVacio.Controllers
         {
             return View();
         }
+
+        public IActionResult About(String usuario)
+        {
+            ViewData["SALUDO"]="Hola";
+            return View();
+        }
     }
 }
