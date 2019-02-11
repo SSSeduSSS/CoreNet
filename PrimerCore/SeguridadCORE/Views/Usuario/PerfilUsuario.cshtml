@@ -1,7 +1,16 @@
-﻿
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject UserManager<IdentityUser> Usuario;
+@*IClaimg es un GenericPrincipal vitaminado. Tiene mas propiedades y métodos*@
 @{
     ViewData["Title"] = "PerfilUsuario";
 }
 
 <h2>Perfil Usuario</h2>
+<h3>Bienvenido @Usuario.GetUserName(User)</h3>
 
+<ul>
+    @foreach (var claim in User.Claims) {
+        <li>Asunto : @claim.Subject , Valor: @claim.Value</li>
+    }
+</ul>

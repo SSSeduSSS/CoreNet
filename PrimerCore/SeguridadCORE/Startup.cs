@@ -35,8 +35,8 @@ namespace SeguridadCORE
             services.AddAuthentication().AddMicrosoftAccount(
                 options => {
                 //Estos datos son los que me ha dado microsoft desde  https://apps.dev.microsoft.com
-                    options.ClientId= "b5981792-3011-4cf1-8ccf-113273731bfc";
-                    options.ClientSecret = "qibYZGW7214#ubdcDVA7@[]";
+                    options.ClientId= this.configuration["Authentication:Microsoft:ApplicationId"];
+                    options.ClientSecret = this.configuration["Authentication:Microsoft:Password"]; ;
                 }
             );
 
